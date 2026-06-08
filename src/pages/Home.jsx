@@ -112,7 +112,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 mb-8 w-full sm:w-auto">
             <Link 
               to="/shop" 
-              className="bg-white text-void hover:bg-champagne hover:text-void py-3.5 px-8 text-[10px] uppercase tracking-[0.25em] font-semibold transition-all duration-300 text-center"
+              className="bg-white text-offwhite hover:bg-champagne hover:text-white py-3.5 px-8 text-[10px] uppercase tracking-[0.25em] font-semibold transition-all duration-300 text-center"
             >
               Shop New Drop →
             </Link>
