@@ -5,6 +5,11 @@ import crypto from 'crypto'
 import fs from 'fs'
 import path from 'path'
 
+// Import admin handlers for local routing
+import adminLoginHandler from './api/admin-login.js'
+import adminProductsHandler from './api/admin-products.js'
+import adminUploadHandler from './api/admin-upload.js'
+
 // Load environment variables locally for Vite dev server configuration
 const envPath = path.resolve(process.cwd(), '.env');
 if (fs.existsSync(envPath)) {
@@ -27,6 +32,24 @@ export default defineConfig({
       name: 'local-api-endpoints',
       configureServer(server) {
         server.middlewares.use((req, res, next) => {
+          // Intercept admin-login API
+          if (req.url.startsWith('/api/admin-login')) {
+            adminLoginHandler(req, res);
+            return;
+          }
+
+          // Intercept admin-products API
+          if (req.url.startsWith('/api/admin-products')) {
+            adminProductsHandler(req, res);
+            return;
+          }
+
+          // Intercept admin-upload API
+          if (req.url.startsWith('/api/admin-upload')) {
+            adminUploadHandler(req, res);
+            return;
+          }
+
           // Intercept POST /api/create-order
           if (req.url.startsWith('/api/create-order') && req.method === 'POST') {
             let body = '';
