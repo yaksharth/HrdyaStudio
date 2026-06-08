@@ -18,6 +18,8 @@ export default function Checkout() {
   const codFee = paymentMethod === 'COD' ? 40 : 0;
   const total = subtotal + shipping + codFee;
 
+  const [isProcessing, setIsProcessing] = useState(false);
+
   const handleAddressSubmit = (e) => {
     e.preventDefault();
     if (addressData.name && addressData.phone.length >= 10 && addressData.pincode && addressData.address1) {
@@ -28,11 +30,106 @@ export default function Checkout() {
     }
   };
 
-  const handlePaymentSubmit = (e) => {
+  const handlePaymentSubmit = async (e) => {
     e.preventDefault();
-    setStep(3);
-    clearCart();
-    window.scrollTo(0, 0);
+    
+    // If Cash on Delivery, bypass Razorpay online flow
+    if (paymentMethod === 'COD') {
+      setStep(3);
+      clearCart();
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    setIsProcessing(true);
+
+    try {
+      // 1. BACKEND: Create Razorpay Order
+      // Total amount converted to paise (e.g. ₹500 = 50000 paise)
+      const response = await fetch('/api/create-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount: Math.round(total * 100),
+          currency: 'INR',
+          receipt: `rcpt_${Date.now()}`
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to initialize payment gateway.');
+      }
+
+      const orderData = await response.json();
+
+      // 2. FRONTEND: Configure Razorpay Options
+      const options = {
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_test_Sz7bLS9OuMvlss',
+        amount: orderData.amount,
+        currency: orderData.currency,
+        name: 'HRDYA Studio',
+        description: 'Order Payment',
+        order_id: orderData.order_id,
+        handler: async function (razorpayResponse) {
+          try {
+            // 3. BACKEND: Verify Payment Signature
+            const verifyResponse = await fetch('/api/verify-payment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                razorpay_order_id: razorpayResponse.razorpay_order_id,
+                razorpay_payment_id: razorpayResponse.razorpay_payment_id,
+                razorpay_signature: razorpayResponse.razorpay_signature
+              })
+            });
+
+            const verifyResult = await verifyResponse.json();
+
+            if (verifyResult.success) {
+              setStep(3);
+              clearCart();
+              window.scrollTo(0, 0);
+            } else {
+              alert(verifyResult.error || 'Payment signature verification failed. Please contact support.');
+            }
+          } catch (verifyError) {
+            console.error('Verification Request Error:', verifyError);
+            alert('An error occurred while verifying your payment. Please do not re-pay.');
+          } finally {
+            setIsProcessing(false);
+          }
+        },
+        prefill: {
+          name: addressData.name,
+          email: addressData.email,
+          contact: addressData.phone
+        },
+        theme: {
+          color: '#C59B7E' // Skin accent color matching design system
+        },
+        modal: {
+          ondismiss: function () {
+            setIsProcessing(false);
+            console.log('Payment modal was closed by the user.');
+          }
+        }
+      };
+
+      const rzp = new window.Razorpay(options);
+      
+      rzp.on('payment.failed', function (paymentFailedResponse) {
+        setIsProcessing(false);
+        console.error('Razorpay Payment Failed:', paymentFailedResponse.error);
+        alert(`Payment failed: ${paymentFailedResponse.error.description || 'Transaction error.'}`);
+      });
+
+      rzp.open();
+    } catch (paymentInitError) {
+      setIsProcessing(false);
+      console.error('Payment Initialization Error:', paymentInitError);
+      alert(paymentInitError.message || 'Unable to start checkout. Please try again.');
+    }
   };
 
   if (cartItems.length === 0 && step !== 3) {
@@ -277,8 +374,12 @@ export default function Checkout() {
                     )}
                   </label>
 
-                  <button type="submit" className="w-full bg-[#1A1A1A] text-champagne py-4 rounded-lg font-bold text-sm tracking-widest uppercase hover:bg-black active:scale-95 transition-all shadow-lg mt-8 flex justify-center items-center gap-2">
-                    PAY ₹{total.toLocaleString('en-IN')}
+                  <button 
+                    type="submit" 
+                    disabled={isProcessing}
+                    className="w-full bg-[#1A1A1A] text-champagne py-4 rounded-lg font-bold text-sm tracking-widest uppercase hover:bg-black active:scale-95 transition-all shadow-lg mt-8 flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isProcessing ? 'Processing Payment...' : `PAY ₹${total.toLocaleString('en-IN')}`}
                   </button>
                 </form>
               </motion.div>
