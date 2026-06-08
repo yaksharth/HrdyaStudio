@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-void: #FAF7F0; /* Soft linen white main background */
+  --color-obsidian: #FAF6F0; /* Warm skin/nude surface */
+  --color-surface: #FFFFFF; /* Pure white surface */
+  --color-elevated: #FAF8F5; /* Soft linen cream */
+  --color-trim: #E7E3DB; /* Soft linen border trim */
+  --color-champagne: #C59B7E; /* Soft skin/nude accent */
+  --color-gold-light: #EADDCB; /* Light skin tone beige */
+  --color-offwhite: #1C1917; /* Main dark charcoal-espresso text */
+  --color-cream: #FFFFFF; /* Pure white card/drawer backgrounds */
+  --color-muted: #7E756C; /* Warm taupe text */
+  --color-coral: #D27B88; /* Blush rose pink */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-void text-offwhite font-body;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    selection: none;
+  }
+
+  ::selection {
+    background: rgba(197, 155, 126, 0.25);
+    color: #1C1917;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #FAF7F0; }
+  ::-webkit-scrollbar-thumb {
+    background: #C59B7E;
+    border-radius: 10px;
+  }
+}
+
+@layer components {
+
+  /* ── BUTTONS ── */
+  .btn-primary {
+    @apply bg-champagne text-void font-body font-semibold py-3.5 px-10
+           inline-flex items-center justify-center gap-2 text-center cursor-pointer
+           tracking-[0.15em] uppercase text-[11px] transition-all duration-300 rounded-none
+           hover:bg-gold-light hover:shadow-[0_6px_24px_rgba(200,164,90,0.35)]
+           active:scale-[0.97];
+  }
+
+  .btn-outline {
+    @apply border border-champagne/60 text-champagne font-body font-medium py-3.5 px-10
+           inline-flex items-center justify-center gap-2 text-center cursor-pointer
+           tracking-[0.15em] uppercase text-[11px] transition-all duration-300 rounded-none
+           hover:bg-champagne hover:text-void hover:border-champagne hover:shadow-[0_6px_24px_rgba(200,164,90,0.25)]
+           active:scale-[0.97];
+  }
+
+  .btn-dark {
+    @apply bg-void text-champagne border border-trim font-body font-medium py-3.5 px-10
+           inline-flex items-center justify-center gap-2 text-center cursor-pointer
+           tracking-[0.15em] uppercase text-[11px] transition-all duration-300 rounded-none
+           hover:border-champagne/40 hover:bg-surface
+           active:scale-[0.97];
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    @apply text-champagne/50 text-[9px] uppercase tracking-[0.45em] font-body font-medium mb-3 block;
+  }
+
+  /* ── GOLD TEXT ── */
+  .gold-text {
+    background: linear-gradient(135deg, #C8A45A 0%, #EED880 45%, #C8A45A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── GLASS CARD ── */
+  .glass {
+    background: rgba(19, 19, 25, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(200, 164, 90, 0.08);
+  }
+
+  /* ── CUSTOM SCROLLBAR (local) ── */
+  .custom-scrollbar::-webkit-scrollbar { width: 3px; height: 3px; }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(200, 164, 90, 0.3);
+    border-radius: 10px;
+  }
+
+  /* ── RANGE INPUT ── */
+  input[type="range"] {
+    accent-color: #C8A45A;
+  }
+
+  /* ── DIVIDER ── */
+  .divider-gold {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(200, 164, 90, 0.3);
+  }
+  .divider-gold::before,
+  .divider-gold::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(200, 164, 90, 0.15);
+  }
+
+  /* ── SCROLL MARQUEE ── */
+  .animate-marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}

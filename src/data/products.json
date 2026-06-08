@@ -1,0 +1,490 @@
+[
+  {
+    "id": "b0",
+    "name": "Bamboo Cuff Style Adjustable Bracelet",
+    "category": "Bracelets",
+    "material": "Gold-toned bamboo-style metal alloy with anti-tarnish coating",
+    "occasion": "Daily Wear",
+    "price": 280,
+    "mrp": 399,
+    "images": [
+      "/bamboo-cuff-bracelet-1.png",
+      "/bamboo-cuff-bracelet-2.png"
+    ],
+    "badge": "New Drop",
+    "rating": 4.7,
+    "reviewCount": 48,
+    "description": "Sleek adjustable cuff inspired by bamboo textures. Fits all wrist sizes and pairs perfectly with any outfit.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "b00",
+    "name": "Green Emerald Style Stone Studded Bracelet",
+    "category": "Bracelets",
+    "material": "Gold-toned stainless steel with emerald-style baguette stones",
+    "occasion": "Party",
+    "price": 280,
+    "mrp": 450,
+    "images": [
+      "/emerald-stone-bracelet-1.png",
+      "/emerald-stone-bracelet-2.png",
+      "/emerald-stone-bracelet-3.png"
+    ],
+    "badge": "Trending",
+    "rating": 4.8,
+    "reviewCount": 63,
+    "description": "Stunning gold-tone bangle set with vivid emerald-style baguette stones. A bold statement piece for any occasion.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "b001",
+    "name": "Cartier Bracelet Dupe",
+    "category": "Bracelets",
+    "material": "Gold-toned stainless steel with crystal screw-detail design",
+    "occasion": "Daily Wear",
+    "price": 280,
+    "mrp": 499,
+    "images": [
+      "/cartier-dupe-bracelet-1.png",
+      "/cartier-dupe-bracelet-2.jpg",
+      "/cartier-dupe-bracelet-3.png"
+    ],
+    "badge": "Bestseller",
+    "rating": 4.9,
+    "reviewCount": 187,
+    "description": "Luxury-inspired Love bracelet & Juste un Clou nail bangle dupe. Premium gold-tone finish with signature screw detailing.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "b002",
+    "name": "Cartier Nail Bracelet",
+    "category": "Bracelets",
+    "material": "Gold-toned stainless steel, nail-head design with crystal accents",
+    "occasion": "Daily Wear",
+    "price": 280,
+    "mrp": 499,
+    "images": [
+      "/cartier-nail-bracelet-1.png",
+      "/cartier-nail-bracelet-2.jpg",
+      "/cartier-nail-bracelet-3.png"
+    ],
+    "badge": "Trending",
+    "rating": 4.9,
+    "reviewCount": 234,
+    "description": "Iconic Juste un Clou-inspired nail bangle. Sleek gold-tone cuff with signature nail-head and crystal detailing — luxury look for less.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "r00",
+    "name": "The Wave Ring",
+    "category": "Rings",
+    "material": "Gold-toned stainless steel, fluid wave design",
+    "occasion": "Daily Wear",
+    "price": 180,
+    "mrp": 299,
+    "images": [
+      "/wave-ring-1.png",
+      "/wave-ring-2.png"
+    ],
+    "badge": "New Drop",
+    "rating": 4.7,
+    "reviewCount": 56,
+    "description": "A sculptural double-wave ring that flows elegantly around your finger. Adjustable and minimalist.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided.",
+    "sizes": ["Adjustable"]
+  },
+  {
+    "id": "r01",
+    "name": "The Snake Ring",
+    "category": "Rings",
+    "material": "Gold-toned zinc alloy, serpent coil design",
+    "occasion": "Party",
+    "price": 180,
+    "mrp": 299,
+    "images": [
+      "/snake-ring-1.png",
+      "/snake-ring-2.png"
+    ],
+    "badge": "Trending",
+    "rating": 4.8,
+    "reviewCount": 93,
+    "description": "Bold serpentine coil ring — a statement piece with an edgy, luxe appeal. One size fits all.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided.",
+    "sizes": ["Adjustable"]
+  },
+  {
+    "id": "r02",
+    "name": "Ball Adjustable Ring",
+    "category": "Rings",
+    "material": "Gold-toned stainless steel, dual ball design",
+    "occasion": "College",
+    "price": 180,
+    "mrp": 299,
+    "images": [
+      "/ball-ring-1.png",
+      "/ball-ring-2.png"
+    ],
+    "badge": "New Drop",
+    "rating": 4.6,
+    "reviewCount": 71,
+    "description": "Sleek open band ring with two gold-tone orbs of different sizes. Adjustable and ultra-modern.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided.",
+    "sizes": ["Adjustable"]
+  },
+  {
+    "id": "r03",
+    "name": "Serpentine Line Ring",
+    "category": "Rings",
+    "material": "Gold-toned brass, curved line design",
+    "occasion": "Daily Wear",
+    "price": 180,
+    "mrp": 299,
+    "images": [
+      "/serpentine-ring-1.png",
+      "/serpentine-ring-2.png"
+    ],
+    "badge": "",
+    "rating": 4.5,
+    "reviewCount": 44,
+    "description": "An open cuff ring with two graceful curved lines that frame the finger beautifully. Minimalist chic.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided.",
+    "sizes": ["Adjustable"]
+  },
+  {
+    "id": "n0a",
+    "name": "Hollow Heart Necklace",
+    "category": "Necklaces",
+    "material": "Gold-toned snake chain with open heart pendant",
+    "occasion": "Date Night",
+    "price": 199,
+    "mrp": 349,
+    "images": [
+      "/hollow-heart-necklace-1.png",
+      "/hollow-heart-necklace-2.png"
+    ],
+    "badge": "Bestseller",
+    "rating": 4.9,
+    "reviewCount": 215,
+    "description": "Delicate snake chain with a dainty open-heart pendant. Minimalist, romantic and perfect for everyday wear.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "n0b",
+    "name": "Heart Beaded Chain",
+    "category": "Necklaces",
+    "material": "Gold-toned satellite beaded chain with puffy heart pendant",
+    "occasion": "Daily Wear",
+    "price": 199,
+    "mrp": 349,
+    "images": [
+      "/heart-beaded-chain-1.png",
+      "/heart-beaded-chain-2.png"
+    ],
+    "badge": "Trending",
+    "rating": 4.8,
+    "reviewCount": 143,
+    "description": "Chunky puffed gold-tone heart pendant on a dainty satellite beaded chain. Bold yet feminine — a must-have.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "n00",
+    "name": "Bow Choker",
+    "category": "Necklaces",
+    "material": "Gold-toned herringbone chain with bow detail",
+    "occasion": "Date Night",
+    "price": 199,
+    "mrp": 349,
+    "images": [
+      "/bow-choker-1.png",
+      "/bow-choker-2.png",
+      "/bow-choker-3.jpg"
+    ],
+    "badge": "Bestseller",
+    "rating": 4.9,
+    "reviewCount": 178,
+    "description": "Dainty herringbone snake chain with a sweet gold-tone bow charm at the center. Feminine and effortlessly chic.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "n01",
+    "name": "Rose Gold Glass Pendant Necklace",
+    "category": "Necklaces",
+    "material": "Gold-toned beaded chain with rose glass pendant",
+    "occasion": "Daily Wear",
+    "price": 199,
+    "mrp": 349,
+    "images": [
+      "/rose-gold-pendant-1.png",
+      "/rose-gold-pendant-2.png"
+    ],
+    "badge": "New Drop",
+    "rating": 4.8,
+    "reviewCount": 62,
+    "description": "Elegant oval glass pendant with an engraved rose motif, set in a textured gold frame on a beaded chain. Perfect for gifting.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "n0c",
+    "name": "Silver Snake Chain",
+    "category": "Necklaces",
+    "material": "Premium silver-plated copper alloy with anti-tarnish coating",
+    "occasion": "Daily Wear",
+    "price": 180,
+    "mrp": 299,
+    "images": [
+      "/silver-snake-chain-1.png",
+      "/silver-snake-chain-2.png"
+    ],
+    "badge": "New Drop",
+    "rating": 4.7,
+    "reviewCount": 39,
+    "description": "Sleek and liquid-like sterling silver-style snake chain. Glides smoothly on the collarbone, perfect for layering or wearing solo.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "n0d",
+    "name": "Pink Heart Pearl Necklace",
+    "category": "Necklaces",
+    "material": "Faux pearls, crystal rhinestones, silver-toned alloy, pink glass gemstone",
+    "occasion": "Date Night",
+    "price": 180,
+    "mrp": 299,
+    "images": [
+      "/pink-heart-pearl-necklace-1.png"
+    ],
+    "badge": "Trending",
+    "rating": 4.8,
+    "reviewCount": 52,
+    "description": "Gorgeous asymmetric half-pearl, half-rhinestone chain featuring a romantic pink glass heart pendant with a delicate chain drop. Effortlessly feminine.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "n0e",
+    "name": "Lavender Love Planet Pearl Necklace",
+    "category": "Necklaces",
+    "material": "Lavender-tinted faux pearls, crystal chain, silver-toned alloy, lilac glass heart",
+    "occasion": "College",
+    "price": 180,
+    "mrp": 299,
+    "images": [
+      "/lavender-love-planet-1.png"
+    ],
+    "badge": "Trending",
+    "rating": 4.9,
+    "reviewCount": 31,
+    "description": "Stunning asymmetric design with lavender faux pearls on one side and a crystal chain on the other. Features an orbit planet pendant with a lavender heart center.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "n0f",
+    "name": "Double Layered Choker Necklace",
+    "category": "Necklaces",
+    "material": "Silver-plated zinc alloy with cubic zirconia crystal details",
+    "occasion": "Party",
+    "price": 130,
+    "mrp": 249,
+    "images": [
+      "/double-layered-choker-1.png"
+    ],
+    "badge": "New Drop",
+    "rating": 4.7,
+    "reviewCount": 28,
+    "description": "Elegant dual-strand choker set featuring a sparkling rhinestone-embellished collar strand and a longer delicate chain with a bow-tied crystal drop.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "n0g",
+    "name": "Multi layer kitty & Butterfly charm necklace",
+    "category": "Necklaces",
+    "material": "Silver-toned zinc alloy with multi-layer chains, butterfly charm, heart lock charm, and kitty accent",
+    "occasion": "College",
+    "price": 180,
+    "mrp": 299,
+    "images": [
+      "/kitty-butterfly-necklace-1.png"
+    ],
+    "badge": "New Drop",
+    "rating": 4.8,
+    "reviewCount": 19,
+    "description": "Chic multi-layer silver-toned necklace featuring an aesthetic mix of link chains, a detailed butterfly pendant, heart lock charm, and a playful kitty accent. Perfect for Y2K/grunge styling.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "s00",
+    "name": "Rose Gold-Plated American Diamond Studded Jewellery Set",
+    "category": "Jewellery Sets",
+    "material": "Rose gold-plated alloy studded with premium American Diamonds (cubic zirconia)",
+    "occasion": "Party",
+    "price": 200,
+    "mrp": 350,
+    "images": [
+      "/ad-jewellery-set-1.jpg",
+      "/ad-jewellery-set-2.png"
+    ],
+    "badge": "New Drop",
+    "rating": 4.8,
+    "reviewCount": 37,
+    "description": "Stunning rose gold-plated jewellery set featuring sparkling American Diamonds. Includes a delicate necklace and matching earrings, perfect for special occasions.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided.",
+    "includes": [
+      "1x Rose Gold AD Necklace",
+      "1x Pair of Matching AD Earrings"
+    ]
+  },
+  {
+    "id": "s01",
+    "name": "Vintage Heart Necklace Set",
+    "category": "Jewellery Sets",
+    "material": "Gold-toned alloy with detailed vintage pattern and glass gemstone accents",
+    "occasion": "Date Night",
+    "price": 300,
+    "mrp": 499,
+    "images": [
+      "/vintage-heart-set-1.jpg",
+      "/vintage-heart-set-2.jpg"
+    ],
+    "badge": "Trending",
+    "rating": 4.9,
+    "reviewCount": 24,
+    "description": "Charming vintage-inspired heart pendant necklace with matching heart drop earrings. A timeless romantic design.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided.",
+    "includes": [
+      "1x Vintage Heart Necklace",
+      "1x Pair of Vintage Heart Earrings"
+    ]
+  },
+  {
+    "id": "s02",
+    "name": "Solitaire Necklace Set",
+    "category": "Jewellery Sets",
+    "material": "Gold-plated brass with premium cubic zirconia solitaire stones",
+    "occasion": "Date Night",
+    "price": 300,
+    "mrp": 499,
+    "images": [
+      "/solitaire-necklace-set-1.png",
+      "/solitaire-necklace-set-2.jpg"
+    ],
+    "badge": "Bestseller",
+    "rating": 4.9,
+    "reviewCount": 89,
+    "description": "Elegant classic solitaire stone necklace paired with matching solitaire earrings. Minimalist sophistication that sparkles brilliantly.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided.",
+    "includes": [
+      "1x Solitaire Necklace",
+      "1x Pair of Solitaire Earrings"
+    ]
+  },
+  {
+    "id": "s03",
+    "name": "Van Cleef Style Clover Jewellery Set",
+    "category": "Jewellery Sets",
+    "material": "Gold-plated stainless steel, mother-of-pearl style clover inserts",
+    "occasion": "Party",
+    "price": 350,
+    "mrp": 599,
+    "images": [
+      "/van-cleef-set-1.png",
+      "/van-cleef-set-2.png"
+    ],
+    "badge": "Trending",
+    "rating": 5.0,
+    "reviewCount": 142,
+    "description": "Iconic quatrefoil clover design set in golden borders with elegant white mother-of-pearl style clover inserts. A complete 4-piece set.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided.",
+    "includes": [
+      "1x Clover Necklace",
+      "1x Clover Bracelet",
+      "1x Clover Ring",
+      "1x Pair of Clover Earrings"
+    ]
+  },
+  {
+    "id": "e00",
+    "name": "Leaf Like Studs",
+    "category": "Earrings",
+    "material": "Gold-plated alloy with green marbled enamel details",
+    "occasion": "Daily Wear",
+    "price": 99,
+    "mrp": 199,
+    "images": [
+      "/leaf-stud-earrings-1.png",
+      "/leaf-stud-earrings-2.png"
+    ],
+    "badge": "New Drop",
+    "rating": 4.6,
+    "reviewCount": 15,
+    "description": "Dainty monstera leaf-like stud earrings featuring a beautiful blend of green marbled shades set in a gold-plated frame.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "e01",
+    "name": "Crystal Fairy Flower Pearl Studs",
+    "category": "Earrings",
+    "material": "Gold-plated brass, pearlescent flower petals, faux pearls, crystal rhinestones",
+    "occasion": "Date Night",
+    "price": 120,
+    "mrp": 199,
+    "images": [
+      "/flower-pearl-stud-earrings-1.png",
+      "/flower-pearl-stud-earrings-2.png"
+    ],
+    "badge": "Trending",
+    "rating": 4.8,
+    "reviewCount": 34,
+    "description": "Stunning fairy flower studs featuring delicate pearlescent petals, a sparkling rhinestone center, and cascading faux pearl tassels.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "e02",
+    "name": "Bag Shape Hoop Earrings",
+    "category": "Earrings",
+    "material": "Gold-plated zinc alloy with white enamel coating",
+    "occasion": "Daily Wear",
+    "price": 99,
+    "mrp": 199,
+    "images": [
+      "/bag-shape-hoop-earrings-1.png",
+      "/bag-shape-hoop-earrings-2.png"
+    ],
+    "badge": "Trending",
+    "rating": 4.7,
+    "reviewCount": 22,
+    "description": "Minimalist and chic gold-toned hoop earrings shaped like handbag silhouettes, finished with a smooth pearlescent white enamel coating.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "e03",
+    "name": "Palm Leaf Long Tassel Earrings",
+    "category": "Earrings",
+    "material": "Gold-plated copper, green enamel leaves, crystal accents, long chain tassels",
+    "occasion": "Party",
+    "price": 120,
+    "mrp": 249,
+    "images": [
+      "/palm-leaf-tassel-earrings-1.png"
+    ],
+    "badge": "New Drop",
+    "rating": 4.9,
+    "reviewCount": 16,
+    "description": "Stunning statement earrings featuring sparkling rhinestone palm leaves with rich green enamel detail, suspended above long, fluid gold-toned tassel chains.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  },
+  {
+    "id": "e04",
+    "name": "Square Long Tassel Earrings",
+    "category": "Earrings",
+    "material": "Gold-plated brass, white mother-of-pearl style square inserts, long chain tassels",
+    "occasion": "Date Night",
+    "price": 120,
+    "mrp": 249,
+    "images": [
+      "/square-long-tassel-earrings-1.png"
+    ],
+    "badge": "Trending",
+    "rating": 4.8,
+    "reviewCount": 29,
+    "description": "Geometric luxury statement earrings designed with two stacked mother-of-pearl style square frames and long, sweeping gold-toned chain tassels.",
+    "careInstructions": "Keep away from water, perfume, and sweat. Wipe with a soft dry cloth after use. Store in the pouch provided."
+  }
+]
