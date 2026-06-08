@@ -65,7 +65,7 @@ export default function Checkout() {
 
       // 2. FRONTEND: Configure Razorpay Options
       const options = {
-        key: import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_test_SzCOOODocx9Qw1',
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_live_SzCdVrDcypn84C',
         amount: orderData.amount,
         currency: orderData.currency,
         name: 'HRDYA Studio',
