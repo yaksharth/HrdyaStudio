@@ -12,7 +12,7 @@ export default function Checkout() {
   const [addressData, setAddressData] = useState({
     name: '', phone: '', email: '', pincode: '', address1: '', address2: '', landmark: ''
   });
-  const [paymentMethod, setPaymentMethod] = useState('UPI');
+  const [paymentMethod, setPaymentMethod] = useState('Online');
 
   const shipping = subtotal > 599 ? 0 : 99;
   const codFee = paymentMethod === 'COD' ? 40 : 0;
@@ -265,112 +265,45 @@ export default function Checkout() {
 
                 <form onSubmit={handlePaymentSubmit} className="space-y-4">
                   
-                  {/* UPI */}
-                  <label className={`block p-4 border rounded-lg transition-colors cursor-pointer ${paymentMethod === 'UPI' ? 'border-[#1A1A1A] bg-white shadow-md' : 'border-gray-300 bg-white/50 hover:border-gray-400'}`}>
+                  {/* Option 1: Pay Online */}
+                  <label className={`block p-4 border rounded-lg transition-all duration-200 cursor-pointer ${paymentMethod === 'Online' ? 'border-[#1A1A1A] bg-white shadow-md' : 'border-gray-300 bg-white/50 hover:border-gray-400'}`}>
                     <div className="flex items-center gap-3">
-                      <input type="radio" name="payment" value="UPI" checked={paymentMethod === 'UPI'} onChange={(e) => setPaymentMethod(e.target.value)} className="accent-[#1A1A1A]" />
-                      <Smartphone size={20} className={paymentMethod === 'UPI' ? 'text-[#1A1A1A]' : 'text-gray-400'} />
-                      <span className="font-bold tracking-wide">UPI (GPay, PhonePe, Paytm)</span>
+                      <input 
+                        type="radio" 
+                        name="payment" 
+                        value="Online" 
+                        checked={paymentMethod === 'Online'} 
+                        onChange={(e) => setPaymentMethod(e.target.value)} 
+                        className="accent-[#1A1A1A]" 
+                      />
+                      <CreditCard size={20} className={paymentMethod === 'Online' ? 'text-[#1A1A1A]' : 'text-gray-400'} />
+                      <span className="font-bold tracking-wide">Pay Online (UPI, Cards, Net Banking, Wallets)</span>
                     </div>
-                    {paymentMethod === 'UPI' && (
-                      <div className="mt-4 pl-8">
-                        <svg width="150" height="150" viewBox="0 0 29 29" fill="none" className="mb-4 bg-white p-2 border border-trim">
-                          {/* Finder Patterns */}
-                          {/* Top Left */}
-                          <path d="M1 1h7v7H1V1zm1 1v5h5V2H2z" fill="#1A1A1A"/>
-                          <rect x="3" y="3" width="3" height="3" fill="#1A1A1A"/>
-                          
-                          {/* Top Right */}
-                          <path d="M21 1h7v7h-7V1zm1 1v5h5V2h-5z" fill="#1A1A1A"/>
-                          <rect x="23" y="3" width="3" height="3" fill="#1A1A1A"/>
-                          
-                          {/* Bottom Left */}
-                          <path d="M1 21h7v7H1v-7zm1 1v5h5v-5H2z" fill="#1A1A1A"/>
-                          <rect x="3" y="23" width="3" height="3" fill="#1A1A1A"/>
-                          
-                          {/* Alignment Pattern */}
-                          <path d="M19 19h5v5h-5v-5zm1 1v3h3v-3h-3z" fill="#1A1A1A"/>
-                          <rect x="21" y="21" width="1" height="1" fill="#1A1A1A"/>
-
-                          {/* Timing Patterns */}
-                          <path d="M8 3h13v1H8V3z" fill="#1C1917" fillOpacity="0.4"/>
-                          <path d="M3 8v13h1V8H3z" fill="#1C1917" fillOpacity="0.4"/>
-
-                          {/* Random Data Blocks (Payload Mockup) */}
-                          <rect x="10" y="5" width="2" height="1" fill="#1A1A1A"/>
-                          <rect x="13" y="5" width="1" height="3" fill="#1A1A1A"/>
-                          <rect x="16" y="5" width="2" height="2" fill="#1A1A1A"/>
-                          <rect x="10" y="7" width="1" height="2" fill="#1A1A1A"/>
-                          <rect x="12" y="9" width="3" height="1" fill="#1A1A1A"/>
-                          <rect x="10" y="11" width="2" height="2" fill="#1A1A1A"/>
-                          
-                          <rect x="5" y="10" width="1" height="2" fill="#1A1A1A"/>
-                          <rect x="5" y="13" width="3" height="1" fill="#1A1A1A"/>
-                          
-                          <rect x="11" y="15" width="2" height="1" fill="#1A1A1A"/>
-                          <rect x="10" y="17" width="3" height="2" fill="#1A1A1A"/>
-                          <rect x="14" y="14" width="2" height="3" fill="#1A1A1A"/>
-                          
-                          <rect x="17" y="10" width="2" height="2" fill="#1A1A1A"/>
-                          <rect x="20" y="10" width="1" height="3" fill="#1A1A1A"/>
-                          <rect x="17" y="13" width="3" height="1" fill="#1A1A1A"/>
-                          
-                          <rect x="25" y="10" width="2" height="2" fill="#1A1A1A"/>
-                          <rect x="24" y="13" width="3" height="1" fill="#1A1A1A"/>
-                          <rect x="26" y="15" width="1" height="3" fill="#1A1A1A"/>
-                          
-                          <rect x="15" y="19" width="3" height="1" fill="#1A1A1A"/>
-                          <rect x="15" y="21" width="1" height="3" fill="#1A1A1A"/>
-                          <rect x="17" y="23" width="2" height="2" fill="#1A1A1A"/>
-                          
-                          <rect x="20" y="26" width="3" height="1" fill="#1A1A1A"/>
-                          <rect x="25" y="25" width="2" height="2" fill="#1A1A1A"/>
-                          
-                          <rect x="10" y="21" width="2" height="2" fill="#1A1A1A"/>
-                          <rect x="11" y="24" width="3" height="1" fill="#1A1A1A"/>
-                          <rect x="13" y="26" width="1" height="2" fill="#1A1A1A"/>
-                        </svg>
-                        <input type="text" placeholder="Enter UPI ID (e.g., 9876543210@ybl)" className="w-full bg-white border border-gray-300 rounded p-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#1A1A1A]" />
-                      </div>
+                    {paymentMethod === 'Online' && (
+                      <p className="pl-8 mt-2 text-xs text-muted leading-relaxed font-body">
+                        Pay securely using Razorpay. Supports Google Pay, PhonePe, Paytm, Credit/Debit Cards, Net Banking, and Wallets.
+                      </p>
                     )}
                   </label>
 
-                  {/* Card */}
-                  <label className={`block p-4 border rounded-lg transition-colors cursor-pointer ${paymentMethod === 'Card' ? 'border-[#1A1A1A] bg-white shadow-md' : 'border-gray-300 bg-white/50 hover:border-gray-400'}`}>
+                  {/* Option 2: Cash on Delivery (COD) */}
+                  <label className={`block p-4 border rounded-lg transition-all duration-200 cursor-pointer ${paymentMethod === 'COD' ? 'border-[#1A1A1A] bg-white shadow-md' : 'border-gray-300 bg-white/50 hover:border-gray-400'}`}>
                     <div className="flex items-center gap-3">
-                      <input type="radio" name="payment" value="Card" checked={paymentMethod === 'Card'} onChange={(e) => setPaymentMethod(e.target.value)} className="accent-[#1A1A1A]" />
-                      <CreditCard size={20} className={paymentMethod === 'Card' ? 'text-[#1A1A1A]' : 'text-gray-400'} />
-                      <span className="font-bold tracking-wide">Credit / Debit Card</span>
-                    </div>
-                    {paymentMethod === 'Card' && (
-                      <div className="mt-4 pl-8 space-y-4">
-                        <input type="text" placeholder="Card Number" className="w-full bg-white border border-gray-300 rounded p-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#1A1A1A]" />
-                        <div className="flex gap-4">
-                          <input type="text" placeholder="MM/YY" className="w-1/2 bg-white border border-gray-300 rounded p-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#1A1A1A]" />
-                          <input type="text" placeholder="CVV" className="w-1/2 bg-white border border-gray-300 rounded p-2 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#1A1A1A]" />
-                        </div>
-                      </div>
-                    )}
-                  </label>
-
-                  {/* Net Banking */}
-                  <label className={`block p-4 border rounded-lg transition-colors cursor-pointer ${paymentMethod === 'NetBanking' ? 'border-[#1A1A1A] bg-white shadow-md' : 'border-gray-300 bg-white/50 hover:border-gray-400'}`}>
-                    <div className="flex items-center gap-3">
-                      <input type="radio" name="payment" value="NetBanking" checked={paymentMethod === 'NetBanking'} onChange={(e) => setPaymentMethod(e.target.value)} className="accent-[#1A1A1A]" />
-                      <Wallet size={20} className={paymentMethod === 'NetBanking' ? 'text-[#1A1A1A]' : 'text-gray-400'} />
-                      <span className="font-bold tracking-wide">Net Banking</span>
-                    </div>
-                  </label>
-
-                  {/* COD */}
-                  <label className={`block p-4 border rounded-lg transition-colors cursor-pointer ${paymentMethod === 'COD' ? 'border-[#1A1A1A] bg-white shadow-md' : 'border-gray-300 bg-white/50 hover:border-gray-400'}`}>
-                    <div className="flex items-center gap-3">
-                      <input type="radio" name="payment" value="COD" checked={paymentMethod === 'COD'} onChange={(e) => setPaymentMethod(e.target.value)} className="accent-[#1A1A1A]" />
+                      <input 
+                        type="radio" 
+                        name="payment" 
+                        value="COD" 
+                        checked={paymentMethod === 'COD'} 
+                        onChange={(e) => setPaymentMethod(e.target.value)} 
+                        className="accent-[#1A1A1A]" 
+                      />
                       <Banknote size={20} className={paymentMethod === 'COD' ? 'text-[#1A1A1A]' : 'text-gray-400'} />
-                      <span className="font-bold tracking-wide">Cash on Delivery</span>
+                      <span className="font-bold tracking-wide">Cash on Delivery (COD)</span>
                     </div>
                     {paymentMethod === 'COD' && (
-                      <p className="pl-8 mt-2 text-xs text-coral font-bold">Note: ₹40 COD charge applicable.</p>
+                      <p className="pl-8 mt-2 text-xs text-coral font-bold font-body">
+                        Note: ₹40 COD fee is applicable. Pay in cash when your order is delivered.
+                      </p>
                     )}
                   </label>
 
@@ -379,7 +312,11 @@ export default function Checkout() {
                     disabled={isProcessing}
                     className="w-full bg-[#1A1A1A] text-champagne py-4 rounded-lg font-bold text-sm tracking-widest uppercase hover:bg-black active:scale-95 transition-all shadow-lg mt-8 flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isProcessing ? 'Processing Payment...' : `PAY ₹${total.toLocaleString('en-IN')}`}
+                    {isProcessing 
+                      ? 'Processing Payment...' 
+                      : paymentMethod === 'COD' 
+                        ? `PLACE ORDER (COD) - ₹${total.toLocaleString('en-IN')}` 
+                        : `PAY NOW - ₹${total.toLocaleString('en-IN')}`}
                   </button>
                 </form>
               </motion.div>
